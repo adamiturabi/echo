@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://expath.org/ns/pkg" name="http://exist-db.org/echo"
+	abbrev="echo" version="2015.10.29" spec="1.0">
+	<title>Example Echo Java Function Module</title>
+	<dependency processor="http://exist-db.org/" />
+</package>
