@@ -11,6 +11,7 @@
             <directory>src/resources</directory>
             <outputDirectory>/</outputDirectory>
             <includes>
+                <include>icon.png</include>
                 <include>exist.xml</include>
                 <include>expath-pkg.xml</include>
                 <include>repo.xml</include>
