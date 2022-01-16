@@ -10,7 +10,7 @@ I haven't found a complete working example online with instructions so here is a
 
    Also make sure to rename within the files within the `resources` directory.
 4. In the top-level directory (exist-db-xquery-java-example), hit `mvn package` to compile.
-5. A `directory` directory should be created with a `.jar` file. In mycase it is `myfancyexample-2015.10.29.jar`.
+5. A `target` directory should be created with a `.jar` file. In mycase it is `myfancyexample-2015.10.29.jar`.
 6. Copy this `.jar` file to `EXIST_HOME/lib/user/`. `$EXIST_HOME` is weherever eXist-db is installed. In my case it is in `$HOME/eXist-db`. Don't worry if you don't have an environment variable called `$EXIST_HOME`.
 7. Restart exist-db server.
 8. Open Exide IDE and try the following code:
