@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <meta xmlns="http://exist-db.org/xquery/repo">
-  <description>Echo Module</description>
+  <description>MyFancyExample Module</description>
   <author>Loren Cahlander</author>
   <website/>
   <status>beta</status>

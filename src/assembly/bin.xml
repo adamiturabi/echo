@@ -21,7 +21,7 @@
             <directory>target</directory>
             <outputDirectory>/content</outputDirectory>
             <includes>
-                <include>echo-*.jar</include>
+                <include>myfancyexample-*.jar</include>
             </includes>
         </fileSet>
     </fileSets>

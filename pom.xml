@@ -2,11 +2,11 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.exist.xquery.modules.echo</groupId>
-  <artifactId>echo</artifactId>
+  <groupId>org.exist.xquery.modules.myfancyexample</groupId>
+  <artifactId>myfancyexample</artifactId>
   <packaging>jar</packaging>
   <version>2015.10.29</version>
-  <name>echo</name>
+  <name>myfancyexample</name>
   <url>http://www.exist-db.org</url>
   <organization>
     <name>eXist Solutions</name>
@@ -46,7 +46,7 @@
         <artifactId>maven-assembly-plugin</artifactId>
         <configuration>
           <descriptor>src/assembly/bin.xml</descriptor>
-          <finalName>echo-${project.version}</finalName>
+          <finalName>myfancyexample-${project.version}</finalName>
         </configuration>
         <executions>
           <execution>
@@ -66,8 +66,8 @@
             <phase>install</phase>
             <configuration>
               <target>
-                <copy file="${project.build.directory}/echo-${project.version}.zip"
-                  tofile="${project.build.directory}/echo-${project.version}.xar"/>
+                <copy file="${project.build.directory}/myfancyexample-${project.version}.zip"
+                  tofile="${project.build.directory}/myfancyexample-${project.version}.xar"/>
               </target>
             </configuration>
             <goals>

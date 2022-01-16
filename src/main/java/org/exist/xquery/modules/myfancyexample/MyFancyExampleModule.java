@@ -20,7 +20,7 @@
  *  
  *  $Id$
  */
-package org.exist.xquery.modules.echo;
+package org.exist.xquery.modules.myfancyexample;
 
 import java.util.List;
 import java.util.Map;
@@ -28,21 +28,21 @@ import org.exist.xquery.AbstractInternalModule;
 import org.exist.xquery.FunctionDef;
 
 /**
- * @author Loren Cahlander (loren.cahlander@gmail.com)
+ * Based on echo example by Loren Cahlander 
  */
-public class EchoModule extends AbstractInternalModule {
+public class MyFancyExampleModule extends AbstractInternalModule {
 
-	public final static String NAMESPACE_URI = "http://exist-db.org/xquery/echo";
+	public final static String NAMESPACE_URI = "http://exist-db.org/xquery/myfancyexample";
 	
-	public final static String PREFIX = "echo";
+	public final static String PREFIX = "myfancyexample";
     public final static String INCLUSION_DATE = "2015-10-28";
     public final static String RELEASED_IN_VERSION = "eXist-3.0";
 
 	private final static FunctionDef[] functions = {
-		new FunctionDef(EchoFunction.signature, EchoFunction.class)
+		new FunctionDef(MyFancyExampleFunction.signature, MyFancyExampleFunction.class)
 	};
 	
-	public EchoModule(Map<String, List<? extends Object>> parameters) {
+	public MyFancyExampleModule(Map<String, List<? extends Object>> parameters) {
 		super(functions, parameters);
 	}
 
@@ -55,7 +55,7 @@ public class EchoModule extends AbstractInternalModule {
 	}
 
 	public String getDescription() {
-		return "A module for showing good echo of module usage";
+		return "A module for showing exampleof Java of module usage";
 	}
 
     public String getReleaseVersion() {

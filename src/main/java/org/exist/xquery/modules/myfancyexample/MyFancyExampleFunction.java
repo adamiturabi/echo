@@ -20,7 +20,7 @@
  *  
  *  $Id$
  */
-package org.exist.xquery.modules.echo;
+package org.exist.xquery.modules.myfancyexample;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -40,23 +40,24 @@ import org.exist.xquery.value.Type;
 import org.exist.xquery.value.ValueSequence;
 
 /**
- * This is an echo module showing how to create a function module.
+ * This is an example module that concatenates an input string with "Hello" showing how to create a function module.
  * 
- * @author Loren Cahlander (loren.cahlander@gmail.com)
+ * Based on the echo example by Loren Cahlander
  */
-public class EchoFunction extends BasicFunction {
+public class MyFancyExampleFunction extends BasicFunction {
 
     @SuppressWarnings("unused")
-	private final static Logger logger = LogManager.getLogger(EchoFunction.class);
+	private final static Logger logger = LogManager.getLogger(MyFancyExampleFunction.class);
 
+    // Cardinality possibilites: ZERO, ZERO_OR_ONE, ONE, ZERO_OR_MORE, ONE_OR_MORE
     public final static FunctionSignature signature =
 		new FunctionSignature(
-			new QName("echo", EchoModule.NAMESPACE_URI, EchoModule.PREFIX),
-			"A useless echo function. It just echoes the input parameters.",
-			new SequenceType[] { new FunctionParameterSequenceType("text", Type.STRING, Cardinality.ZERO_OR_MORE, "The text to echo")},
-			new FunctionReturnSequenceType(Type.STRING, Cardinality.ZERO_OR_MORE, "the echoed text"));
+			new QName("myfancyexample", MyFancyExampleModule.NAMESPACE_URI, MyFancyExampleModule.PREFIX),
+			"A useless example function. It just concatenates the input string with Hello.",
+			new SequenceType[] { new FunctionParameterSequenceType("text", Type.STRING, Cardinality.ONE, "Input text")},
+			new FunctionReturnSequenceType(Type.STRING, Cardinality.ONE, "Output text"));
 
-	public EchoFunction(XQueryContext context) {
+	public MyFancyExampleFunction(XQueryContext context) {
 		super(context, signature);
 	}
 
@@ -68,11 +69,11 @@ public class EchoFunction extends BasicFunction {
 			return Sequence.EMPTY_SEQUENCE;
 		}
 		
-		// iterate through the argument sequence and echo each item
+		// iterate through the argument sequence and output each item
 		ValueSequence result = new ValueSequence();
 		for (SequenceIterator i = args[0].iterate(); i.hasNext();) {
 			String str = i.nextItem().getStringValue();
-			result.add(new StringValue("echo: " + str));
+			result.add(new StringValue("Hello " + str));
 		}
 		return result;
 	}

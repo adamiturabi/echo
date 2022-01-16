@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://exist-db.org/ns/expath-pkg">
-    <jar>echo-2015.10.29.jar</jar>
+    <jar>myfancyexample-2015.10.29.jar</jar>
     <java>
-        <namespace>http://exist-db.org/xquery/echo</namespace>
-        <class>org.exist.xquery.modules.echo.EchoModule</class>
+        <namespace>http://exist-db.org/xquery/myfancyexample</namespace>
+        <class>org.exist.xquery.modules.myfancyexample.MyFancyExampleModule</class>
     </java>
 </package>
